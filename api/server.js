@@ -18,6 +18,16 @@ const connectDB = async () => {
 
 connectDB();
 
+app.get('/musicas', async (req, res) => {
+    try {
+        const[musicas] = await pool.query('SELECT * FROM musicas');
+        
+        res.json(musicas);
+    } catch (error) {
+        res.status(500).json({ error: error.message});
+    }
+});
+
 app.get('/musicas/:emocao', async (req, res) => {
     try {
         const { emocao } = req.params;
@@ -28,7 +38,7 @@ app.get('/musicas/:emocao', async (req, res) => {
     } catch (error) {
         res.status(500).json({ error: error.message});
     }
-})
+});
 
 app.listen(PORT, () => {
     try {
