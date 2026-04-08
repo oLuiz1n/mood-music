@@ -32,7 +32,7 @@ app.get('/musicas/:emocao', async (req, res) => {
     try {
         const { emocao } = req.params;
 
-        const[musicas] = await pool.query('SELECT * FROM musicas WHERE emocao = ?', [emocao]);
+        const[musicas] = await pool.query('SELECT * FROM musicas WHERE emocao = ? ORDER BY RAND() LIMIT 1', [emocao]);
 
         res.json(musicas)
     } catch (error) {
