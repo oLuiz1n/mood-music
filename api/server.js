@@ -30,13 +30,39 @@ app.get('/musicas', async (req, res) => {
     }
 });
 
-app.get('/musicas/:emocao', async (req, res) => {
+app.get('/playlist/:emocao/:tempo', async (req, res) => {
     try {
-        const { emocao } = req.params;
+        const { emocao, tempo } = req.params;
+
+        let alvo = 0;
+
+        if (tempo === '30min'){
+            alvo = 1800;
+        } else if (tempo === '1h') {
+            alvo = 3600;
+        } else {
+            return res.status(400).json({error: 'Tempo Invalido'});
+        }
 
         const[musicas] = await pool.query('SELECT * FROM musicas WHERE emocao_principal = ? ORDER BY RAND() LIMIT 2;', [emocao]);
 
-        res.json(musicas)
+        let playlist = [];
+        let total = 0;
+
+        for (const musica of musicas) {
+            if (total + musica.duracao_segundos <= alvo) {
+                playlist.push(musica);
+                total += musica.duracao_segundos;
+            }
+        }
+
+        res.json({
+            emocao,
+            tempo,
+            total_segundos: total,
+            quantidade: playlist.length,
+            musicas: playlist
+        });
     } catch (error) {
         res.status(500).json({ error: error.message});
     }
