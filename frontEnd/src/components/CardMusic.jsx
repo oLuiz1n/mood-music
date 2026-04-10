@@ -1,6 +1,4 @@
 function CardMusic({ musica, index, musicaAtual, setMusicaAtual }) {
-    const tocando = musicaAtual === index;
-
     return (
         <div>
         <h2>{musica.nome}</h2>
