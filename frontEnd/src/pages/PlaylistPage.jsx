@@ -30,16 +30,16 @@ function PlaylistPage() {
 
     return (
         <div>
-            <h1>Playlist para: {emocao}</h1>
+            <h1> Emoção escolhida: {emocao}</h1>
         {!tempo ? (
             <div>
-                <h2>Quanto tempo de playlist?</h2>
+                <h2>Quanto tempo de playlist você precisa?</h2>
                 <button onClick={() => buscar("30min")}>30 min</button>
                 <button onClick={() => buscar("1h")}>1 hora</button>
             </div>
             ):(
                 <div>
-                    <p>Tempo escolhido: {tempo}</p>
+                    <p>Tempo de playlist escolhido: {tempo}</p>
                     <button onClick={atualizarPlaylist}>Atualizar</button>
                 </div>
             )}

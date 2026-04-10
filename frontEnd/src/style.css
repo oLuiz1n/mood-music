@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+html, body, #root {
+  min-height: 100vh;
+  margin: 0;
+}
+
+body {
+
+}
+
+.cabecalho{
+    background: transparent;
+    text-align: center;
+}
+
+.cabecalho h1 {
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #000000;
+}
+
+.cabecalho h2 {
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    background: linear-gradient(90deg, #fde8e8, #8c18eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nome{
+    font-size: 60px;
+    background: linear-gradient(90deg, #f7e2e2, #8c18eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.texto1 {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.texto1 h3 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-family: 'Inter', sans-serif;
+}
+
+.texto1 p {
+    font-family: 'Lato', sans-serif;
+}
+
+.bloco {
+  margin: 28px 0;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.destaque {
+  background: rgba(255, 255, 255, 0.12);
+  border-left: 4px solid #7c3aed;
+  padding: 18px;
+  border-radius: 12px;
+}
+
+.final {
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.escolhas {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    margin: 28px 0;
+}
+.botoes  {
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    gap: 30px;
+    padding: 30px;         
+    margin: 28px 0;
+}
+
+.botoes button {
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    color: white;
+}
+
+.btn-alegria {
+    background-color: #ffd166;
+    color: #333;
+}
+
+.btn-tristeza {
+    background-color: #5c0894;
+}
+
+.btn-raiva {
+    background-color: #ef233c;
+}
+
+.btn-apaixonado {
+    background-color: #ff4d6d;
+}
+
+.btn-confuso {
+    background-color: #6c757d;
+}
+
+.botoes button:hover {
+    transform: scale(1.10);
+    filter: brightness(1.1);
+}
+
+.botoes button:active {
+    transform: scale(0.95);
+}
+
