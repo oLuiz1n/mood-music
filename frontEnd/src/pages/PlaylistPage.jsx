@@ -6,6 +6,7 @@ function PlaylistPage() {
     const { emocao } = useParams();
     const [musicas, setMusicas] = useState([]);
     const [tempo, setTempo] = useState("");
+    const [musicaAtual, setMusicaAtual] = useState("");
 
     async function buscar(tempoEscolhido){
         try {
@@ -44,8 +45,14 @@ function PlaylistPage() {
             )}
 
             {musicas.length > 0 ? (
-                musicas.map((musica) => (
-                    <CardMusic key={musica.id} musica={musica} />
+                musicas.map((musica, index) => (
+                    <CardMusic 
+                    key={musica.id} 
+                    musica={musica} 
+                    index={index}
+                    musicaAtual={musicaAtual}
+                    setMusicaAtual={setMusicaAtual}
+                    />
                 ))
             ):(
             tempo && <p>Nenhuma musica encontrada.</p>

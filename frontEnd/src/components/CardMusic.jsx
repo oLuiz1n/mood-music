@@ -1,7 +1,5 @@
-import { useState } from "react";
-
-function CardMusic({ musica }) {
-    const [tocando, setTocando] = useState(false);
+function CardMusic({ musica, index, musicaAtual, setMusicaAtual }) {
+    const tocando = musicaAtual === index;
 
     return (
         <div>
@@ -9,11 +7,13 @@ function CardMusic({ musica }) {
         <p>{musica.artista}</p>
         <p>{musica.frase}</p>
 
-      <button onClick={() => setTocando(!tocando)}>
-        {tocando ? "⏸️" : "▶️"}
+      <button onClick={() => setMusicaAtual(musicaAtual === index ? null : index)}>
+        {musicaAtual === index ? "⏸️" : "▶️"}
       </button>
 
-      {tocando && (
+
+
+      {musicaAtual === index && (
         <iframe
           width="0"
           height="0"
