@@ -238,6 +238,11 @@ body {
     color: black;
 }
 
+.btn-tranquilo:hover {
+    background: linear-gradient(120deg, rgb(219, 219, 255), #6399fd);
+    color: black;
+}
+
 .botoes button:hover {
     transform: scale(1.10);
     filter: brightness(1.1);

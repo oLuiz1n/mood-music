@@ -109,6 +109,7 @@ function Home() {
             <button className='btn-raiva' onClick={() => navigate("/playlist/raiva")}>Raiva</button>
             <button className='btn-apaixonado' onClick={() => navigate("playlist/apaixonado")}>Apaixonado</button>
             <button className='btn-confuso' onClick={() => navigate("/playlist/confuso")}>Confuso</button>
+            <button className='btn-tranquilo' onClick={() => navigate("/playlist/tranquilo")}>Tranquilo</button>
         </div>
     </div>
     );
