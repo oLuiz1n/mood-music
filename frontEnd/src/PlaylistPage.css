@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+.playlist-page {
+    min-height: 100vh;
+    padding: 40px;
+    transition: 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+.playlist-page p{
+    font-size: 1.3rem;
+}
+
+.btn-att {
+    min-width: 180px;
+    padding: 18px 28px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background: black;
+    font-size: 1.1rem;
+}
+
+.btn-att:hover {
+    transform: scale(1.10);
+    filter: brightness(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2)
+}
+
+.btn-att:active {
+    transform: scale(0.95);
+}
+
+.btns-tempo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px 20px;
+    margin: 28px 0;
+}
+
+.btns-tempo button{
+    min-width: 180px;
+    padding: 18px 28px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background: black;
+    font-size: 1.1rem;
+}
+
+.btns-tempo button:hover {
+    transform: scale(1.10);
+    filter: brightness(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2)
+}
+
+.btns-tempo button:active {
+    transform: scale(0.95);
+}
+
+
+.playlist-page.alegria {
+    background: linear-gradient(120deg, rgb(255, 255, 0), rgb(255, 145, 0));
+    color: white;
+}
+
+.playlist-page.tristeza {
+    background: linear-gradient(120deg, rgb(197, 202, 207), rgb(40, 54, 245));
+    color: white;
+}
+
+.playlist-page.raiva {
+    background: linear-gradient(120deg, rgb(255, 98, 50), rgb(156, 1, 1));
+    color: white;
+}
+
+.playlist-page.apaixonado {
+    background: linear-gradient(120deg, #ff4d6d, rgb(255, 41, 41));
+    color: white;
+}
+
+.playlist-page.confuso {
+    background: linear-gradient(120deg, rgb(142, 142, 155), #b063fd);
+    color: white;
+}
+.playlist-page.tranquilo {
+    background: linear-gradient(120deg, rgb(219, 219, 255), #6399fd);
+    color: white;
+}
+
+.playlist-page.default {
+    background: #111;
+    color: white;
+}

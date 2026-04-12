@@ -1,0 +1,92 @@
+.player-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; 
+  margin-top: 10px;
+}
+
+.btn-play {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+svg {
+  width: 30px;
+  height: 30px;
+  color: white;
+  transition: 0.2s;
+}
+
+.btn-play:hover svg {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.btn-prox {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-prox:hover svg {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.btn-ant {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-ant:hover svg {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.playlist {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1500px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    max-width: 500px;
+    padding: 20px;
+    justify-content: center;
+    background: transparent;
+    border-radius: 20px;
+    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.295);
+    text-align: center;
+}
+
+.card.ativo {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+.ativo {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1.05); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1.05); }
+}

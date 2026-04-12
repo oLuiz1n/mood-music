@@ -86,9 +86,9 @@ body {
 
 .blocos-topo {
     display: grid;
-    grid-template-columns: repeat(3, 350px); 
-    justify-content: center; 
-    gap: 80px;
+    grid-template-columns: repeat(3, minmax(220px, 350px));
+    justify-content: center;
+    gap: 40px;
     margin: 80px auto;
     font-size: 1.08rem;
 }
@@ -191,18 +191,20 @@ body {
     font-family: 'Inter', sans-serif;
     margin-top: 60px;
 }
-.botoes  {
+
+.botoes {
     display: flex;
     justify-content: center;
-    align-items: center;     
-    gap: 70px;
-    padding: 30px;         
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px 20px;
     margin: 28px 0;
-
 }
 
 .botoes button {
-    padding: 25px 60px;
+    min-width: 180px;
+    padding: 18px 28px;
     border-radius: 40px;
     border: none;
     cursor: pointer;
@@ -210,7 +212,7 @@ body {
     font-weight: bold;
     color: rgb(255, 255, 255);
     background: black;
-    font-size: 1.30rem;
+    font-size: 1.1rem;
 }
 
 .btn-alegria:hover {
@@ -251,4 +253,97 @@ body {
 
 .botoes button:active {
     transform: scale(0.95);
+}
+
+@media (max-width: 1024px) {
+    .titulo {
+        font-size: 56px;
+    }
+
+    .nome {
+        font-size: 46px;
+    }
+
+    .blocos-topo {
+        grid-template-columns: repeat(2, minmax(220px, 320px));
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .titulo {
+        font-size: 42px;
+    }
+
+    .subtitulo {
+        font-size: 18px;
+    }
+
+    .nome {
+        font-size: 34px;
+    }
+
+    .texto1 {
+        padding: 28px 16px;
+    }
+
+    .texto1 h3 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+
+    .texto1 p {
+        font-size: 1.5rem;
+        line-height: 1.35;
+    }
+
+    .bloco {
+        min-height: auto;
+    }
+
+    .blocos-topo {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin: 50px auto;
+    }
+
+    .coluna {
+        gap: 24px;
+    }
+
+    .blocos-finais {
+        gap: 24px;
+        margin: 40px auto 0;
+    }
+
+    .final {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+
+    .escolhas {
+        margin-top: 40px;
+    }
+
+    .escolhas h1 {
+        font-size: 1.8rem;
+        padding-top: 20px;
+        line-height: 1.3;
+    }
+
+    .botoes {
+        gap: 16px;
+        padding: 20px 10px;
+    }
+
+    .botoes button {
+        width: 100%;
+        max-width: 260px;
+        padding: 16px 20px;
+        font-size: 1rem;
+    }
 }
