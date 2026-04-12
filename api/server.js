@@ -44,7 +44,7 @@ app.get('/playlist/:emocao/:tempo', async (req, res) => {
             return res.status(400).json({error: 'Tempo Invalido'});
         }
 
-        const[musicas] = await pool.query('SELECT * FROM musicas WHERE emocao_principal = ? ORDER BY RAND();', [emocao]);
+        const[musicas] = await pool.query('SELECT * FROM musicas WHERE emocao_principal = ? ORDER BY intensidade DESC, rand();', [emocao]);
 
         let playlist = [];
         let total = 0;
