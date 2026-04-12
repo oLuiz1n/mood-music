@@ -2,6 +2,9 @@
 
 > Um projeto criado para conectar emoções com música.
 
+🔗 **Acesse o projeto:**  
+https://mood-music-chi.vercel.app
+
 ---
 
 ## 📌 Sobre o projeto
@@ -23,6 +26,16 @@ E é exatamente isso que o Mood Music faz.
 
 Ele não tenta mudar o que você sente —  
 ele **te acompanha na sua emoção**.
+
+---
+
+## 🧠 Arquitetura do projeto
+
+O projeto foi desenvolvido com arquitetura **full stack**, separando responsabilidades:
+
+- 🌐 **Frontend:** React (Vercel)
+- ⚙️ **Backend:** Node.js + Express (Render)
+- 🗄️ **Banco de Dados:** MySQL (Railway)
 
 ---
 
@@ -56,6 +69,8 @@ Criar uma experiência onde o usuário possa:
 
 - ⏭️ Navegação entre músicas (próxima/anterior)
 
+- ⏳ Estado de carregamento (UX aprimorada)
+
 ---
 
 ## 🧠 Diferencial do projeto
@@ -75,16 +90,23 @@ Diferente de playlists comuns:
 
 ### Frontend
 - React  
+- Vite  
 - CSS  
 
 ### Backend
 - Node.js  
+- Express  
 
 ### Banco de Dados
 - MySQL  
 
+### Infraestrutura
+- Vercel (Frontend)  
+- Render (Backend)  
+- Railway (Database)  
+
 ### Outros
-- API do YouTube (via IDs)  
+- YouTube (via IDs)
 
 ---
 
@@ -95,13 +117,14 @@ Cada música possui:
 - Nome  
 - Artista  
 - Emoção  
+- Intensidade  
 - YouTube ID  
 - Frase personalizada  
+- Duração em segundos  
 
 ---
 
 ## 📸 Demonstração
-
 
 ![Home do projeto](./frontEnd/src/assets/home_mood_music.jpg)
 
@@ -126,10 +149,11 @@ Cada música possui:
 Durante o desenvolvimento deste projeto, trabalhei com:
 
 - Estruturação de dados para recomendação  
-- Integração entre frontend e backend  
+- Integração completa entre frontend, backend e banco de dados  
+- Deploy de aplicações full stack  
+- Consumo de API no frontend  
+- Gerenciamento de estados no React  
 - Experiência do usuário (UX)  
-- Manipulação de estados no React  
-- Organização de lógica de negócio  
 
 ---
 
@@ -139,3 +163,6 @@ Este projeto é mais do que código.
 
 Ele representa algo pessoal.  
 Uma forma de transformar sentimentos em algo compreensível.
+
+E também marca minha evolução como desenvolvedor,  
+construindo uma aplicação completa do início ao deploy em produção.
