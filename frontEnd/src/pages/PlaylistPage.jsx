@@ -49,8 +49,7 @@ function PlaylistPage() {
     async function buscar(tempoEscolhido){
         try {
             setTempo(tempoEscolhido);
-
-
+            
         const response = await fetch(`${import.meta.env.VITE_API_URI}/playlist/${emocao}/${tempoEscolhido}`);
 
         const data = await response.json();
