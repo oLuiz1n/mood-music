@@ -46,7 +46,6 @@ function PlaylistPage() {
         classe: "default"
     };
 
-
     async function buscar(tempoEscolhido){
         try {
             setTempo(tempoEscolhido);
