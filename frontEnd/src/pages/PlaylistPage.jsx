@@ -12,6 +12,7 @@ function PlaylistPage() {
     const [musicas, setMusicas] = useState([]);
     const [tempo, setTempo] = useState("");
     const [musicaAtual, setMusicaAtual] = useState("");
+    const [loading, setLoading] = useState("");
 
     const configEmocao = {
         tristeza:{
@@ -48,6 +49,7 @@ function PlaylistPage() {
 
     async function buscar(tempoEscolhido){
         try {
+            setLoading(true);
             setTempo(tempoEscolhido);
             
         const response = await fetch(`${import.meta.env.VITE_API_URL}/playlist/${emocao}/${tempoEscolhido}`);
@@ -56,8 +58,10 @@ function PlaylistPage() {
         setMusicas(data.musicas);
     } catch (error) {
             console.log('Erro ao buscar musicas:', error);
-        }
-    } 
+        } finally {
+            setLoading(false);
+        };
+    };
 
     function atualizarPlaylist() {
         setTempo("");
@@ -82,7 +86,9 @@ function PlaylistPage() {
                 </div>
             )}
 
-            {musicas.length > 0 ? (
+            {loading ? (
+                <p>Montando sua playlist...</p>
+            ) : musicas.length > 0 ? (
             <div className="playlist">
               <div className="cards">
                   {musicas.map((musica, index) => (
