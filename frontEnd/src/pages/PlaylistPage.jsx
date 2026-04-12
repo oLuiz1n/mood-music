@@ -50,7 +50,7 @@ function PlaylistPage() {
         try {
             setTempo(tempoEscolhido);
             
-        const response = await fetch(`${import.meta.env.VITE_API_URI}/playlist/${emocao}/${tempoEscolhido}`);
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/playlist/${emocao}/${tempoEscolhido}`);
 
         const data = await response.json();
         setMusicas(data.musicas);
