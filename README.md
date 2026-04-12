@@ -103,11 +103,11 @@ Cada música possui:
 ## 📸 Demonstração
 
 
-![Home do projeto](./assets/home_mood_music.jpg)
+![Home do projeto](./frontEnd/src/assets/home_mood_music.jpg)
 
 ---
 
-![Player funcionando](./assets/mood_music_gif.gif)
+![Player funcionando](./frontEnd/src/assets/mood_music_gif.gif)
 
 ---
 
