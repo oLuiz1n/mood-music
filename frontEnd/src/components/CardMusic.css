@@ -58,7 +58,7 @@ svg {
     gap: 20px;
     width: 100%;
     max-width: 1500px;
-    margin-top: 30px;
+    margin-top: 0;
     justify-content: center;
 }
 
@@ -79,6 +79,11 @@ svg {
 .card.ativo {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
   transform: scale(1.05);
+}
+
+.card:hover{
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
 .ativo {

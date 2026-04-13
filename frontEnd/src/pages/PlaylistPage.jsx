@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import CardMusic from "../components/CardMusic.jsx"
 import "../PlaylistPage.css";
+import YoutubePlayer from "../components/YoutubePlayer.jsx";
 
 function PlaylistPage() {
     useEffect(() => {
@@ -56,6 +57,7 @@ function PlaylistPage() {
 
         const data = await response.json();
         setMusicas(data.musicas);
+        setMusicaAtual(0);
     } catch (error) {
             console.log('Erro ao buscar musicas:', error);
         } finally {
@@ -90,18 +92,47 @@ function PlaylistPage() {
                 <p>Montando sua playlist...</p>
             ) : musicas.length > 0 ? (
             <div className="playlist">
-              <div className="cards">
-                  {musicas.map((musica, index) => (
-                      <CardMusic 
-                      key={musica.id} 
-                      musica={musica} 
-                      index={index}
-                      musicaAtual={musicaAtual}
-                      setMusicaAtual={setMusicaAtual}
-                      totalMusicas={musicas.length}
-                      />
-                  ))}
-              </div>  
+                {musicas[musicaAtual]?.youtube_id && (
+                    <div className="player-area">
+                    <YoutubePlayer
+                        videoId={musicas[musicaAtual].youtube_id}
+                        onEnd={() => {
+                        if (musicaAtual < musicas.length - 1) {
+                            setMusicaAtual(musicaAtual + 1);
+                        } else {
+                            setMusicaAtual(0);
+                        }
+                        }}
+                        onNext={() => {
+                        if (musicaAtual < musicas.length - 1) {
+                            setMusicaAtual(musicaAtual + 1);
+                        } else {
+                            setMusicaAtual(0);
+                        }
+                        }}
+                        onPrev={() => {
+                        if (musicaAtual > 0) {
+                            setMusicaAtual(musicaAtual - 1);
+                        } else {
+                            setMusicaAtual(musicas.length - 1);
+                        }
+                        }}
+                    />
+                    </div>
+                )}
+
+                <div className="cards">
+                    {musicas.map((musica, index) => (
+                    <CardMusic
+                        key={musica.id}
+                        musica={musica}
+                        index={index}
+                        musicaAtual={musicaAtual}
+                        setMusicaAtual={setMusicaAtual}
+                        totalMusicas={musicas.length}
+                    />
+                    ))}
+                </div>
             </div>  
             ):(
             tempo && <p>Nenhuma musica encontrada.</p>
