@@ -86,6 +86,15 @@ function YoutubePlayer({ videoId, onEnd, onNext, onPrev }) {
     }
   }
 
+  function formatTimer(segundos) {
+      if (!segundos) return "0:00";
+
+      const minutos = Math.floor(segundos / 60);
+      const segs = Math.floor(segundos % 60);
+
+      return `${minutos}:${segs.toString().padStart(2, "0")}`;
+  };
+
   return (
     <div className="youtube-player-container">
       <div ref={containerRef}></div>
@@ -113,7 +122,7 @@ function YoutubePlayer({ videoId, onEnd, onNext, onPrev }) {
             onChange={(e) => {
               playerRef.current.seekTo(e.target.value, true);
         }}/>
-        <p>{Math.floor(currentTime)} / {Math.floor(duration)} s</p>
+        <p>{formatTimer(currentTime)} / {formatTimer(duration)}</p>
         </div>
     </div>
   </div>
