@@ -152,7 +152,6 @@ Cada música possui:
 - 📊 Análise de dados das emoções mais selecionadas  
 - 👤 Sistema de usuário e histórico  
 - 🎯 Recomendação personalizada  
-- 🎶 Integração com Spotify API  
 
 ---
 
