@@ -51,6 +51,7 @@ Criar uma experiência onde o usuário possa:
 
 ## 🚀 Funcionalidades
 
+### 🎧 Experiência Musical
 - 🎵 Seleção de músicas por emoção:
   - Tristeza  
   - Alegria  
@@ -59,15 +60,26 @@ Criar uma experiência onde o usuário possa:
   - Confuso  
   - Tranquilo  
 
-- ▶️ Player de música integrado (YouTube)  
-
 - 🔀 Entrega de músicas de forma aleatória  
   (evitando repetição e mantendo a experiência dinâmica)
 
 - 💬 Frases personalizadas para cada música  
   (criando conexão emocional com o usuário)
 
-- ⏭️ Navegação entre músicas (próxima/anterior)
+---
+
+### ▶️ Player de Música (YouTube API)
+
+- ▶️ Play / Pause personalizados  
+- ⏭️ Avançar para próxima música  
+- ⏮️ Voltar para música anterior
+- 🔄 Reprodução automática ao final da música
+- 🎚️ Barra de progresso sincronizada com o tempo real
+- ⏱️ Exibição do tempo atual e duração
+
+---
+
+### ⚡ Experiência do Usuário (UX)
 
 - ⏳ Estado de carregamento (UX aprimorada)
 
