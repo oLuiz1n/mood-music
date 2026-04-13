@@ -7,11 +7,11 @@
   display: flex;
   align-items: center;
   background: transparent;
-  border-radius: 15px;
+  border-radius: 25px;
   box-shadow: inset 1px 2px 10px rgba(0, 0, 0, 0.24);
   background: rgba(148, 148, 148, 0.144);
   backdrop-filter: blur(10px);
-  padding: 12px 16px; 
+  padding: 12px 16px;
   width: fit-content;
   flex-direction: column;
   gap: 6px;
@@ -27,7 +27,7 @@
 .player-controls button {
   border: none;
   background: transparent;
-  padding-inline: 30px;
+  padding-inline: 20px;
   cursor: pointer;
   transition: 0.2s;
 }
@@ -59,7 +59,7 @@
 
 .tempo input {
   -webkit-appearance: none;
-  width: 400px;
+  width: 350px;
   height: 4px;
   background: #ffffff40;
   border-radius: 10px;

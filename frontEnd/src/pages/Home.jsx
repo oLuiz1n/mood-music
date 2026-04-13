@@ -92,6 +92,14 @@ function Home() {
       Ela te acompanha nele.
     </p>
 
+    <p className="bloco destaque3">
+      Um exemplo:
+      <br />
+      se você está triste, você não quer ouvir algo barulhento ou fora do momento...
+      <br />
+      você quer algo que te entenda, algo confortável.
+    </p>
+
     <p className="bloco nao-destaque1">
       E é exatamente isso que a música faz.
       <br />
@@ -100,14 +108,6 @@ function Home() {
       e, aos poucos, te dá espaço pra entender aquilo...
       <br />
       e até sair desse estado, se quiser.
-    </p>
-
-    <p className="bloco destaque3">
-      Um exemplo:
-      <br />
-      se você está triste, você não quer ouvir algo barulhento ou fora do momento...
-      <br />
-      você quer algo que te entenda, algo confortável.
     </p>
 
     <p className="bloco nao-destaque">
