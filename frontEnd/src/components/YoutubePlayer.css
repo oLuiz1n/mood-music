@@ -2,6 +2,9 @@
   display: flex;
   justify-content: center;
   margin: 20px 0;
+  width: 100%;
+  padding: 0 12px;
+  box-sizing: border-box;
 }
 .controls {
   display: flex;
@@ -15,6 +18,8 @@
   width: fit-content;
   flex-direction: column;
   gap: 6px;
+  width: 100%;
+  max-width: 380px;
 }
 
 .player-controls {
@@ -22,6 +27,8 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .player-controls button {
@@ -47,6 +54,7 @@
   flex-direction: column;
   align-items: center;
   gap: 4px;
+  width: 100%;
 }
 
 .tempo p {
@@ -59,7 +67,8 @@
 
 .tempo input {
   -webkit-appearance: none;
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   height: 4px;
   background: #ffffff40;
   border-radius: 10px;
@@ -100,4 +109,23 @@
   background: white;
   border-radius: 50%;
   border: none;
+}
+
+@media (max-width: 480px) {
+  .controls {
+    max-width: 100%;
+    padding: 10px 12px;
+  }
+
+  .player-controls {
+    gap: 8px;
+  }
+
+  .player-controls button {
+    padding: 6px;
+  }
+
+  .tempo input {
+    max-width: 100%;
+  }
 }
